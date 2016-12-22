@@ -7,7 +7,12 @@ var userSchema = mongoose.Schema({
 	email : String,
 	password : String,
 	givenName : String,
-	familyName : String
+	familyName : String,
+	orgName : String,
+	country: String,
+	isJournalist : Boolean,
+	addInfo: String,
+	type: String,
 });
 
 //method to hash password

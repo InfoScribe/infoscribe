@@ -5,7 +5,8 @@ var app = angular.module('mainApp', ['ngRoute','ui.bootstrap','flow'])
     permanentErrors: [404, 500, 501],
     maxChunkRetries: 1,
     chunkRetryInterval: 5000,
-    simultaneousUploads: 4
+    simultaneousUploads: 4,
+    singleFile: true
   };
   flowFactoryProvider.on('catchAll', function (event) {
     console.log('catchAll', arguments,event);
@@ -13,7 +14,7 @@ var app = angular.module('mainApp', ['ngRoute','ui.bootstrap','flow'])
   // Can be used with different implementations of Flow.js
   // flowFactoryProvider.factory = fustyFlowFactory;
 }]);
-  
+
 
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -29,25 +30,24 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl :   'html/project.html',
         controller  :   'singleProjectCtrl'
     })
-    .when('/project/:projectId/edit',{
-        templateUrl :   'html/editProject.html',
-        controller  :   'editProjectCtrl'
-    })
     .when('/project/:projectId/exemplar/:fileId',{
         templateUrl :   'html/exemplar.html',
         controller  :   'exemplarCtrl'
     })
+    .when('/project/:projectId/transcribe/:fileId',{
+        templateUrl :   'html/transcribeFile.html',
+        controller  :   'transcribeFileCtrl'
+    })
     .otherwise({ redirectTo: '/' });
-	
+
     // use the HTML5 History API
     $locationProvider.html5Mode(true);
 });
 
 
 app.controller('homeCtrl', function ($scope,$http,$location) {
-	console.log('Home control is under control :P ');
     $('.datepicker').datepicker({
-        startDate: '-3d'
+        startDate: '0d'
     });
     $scope.logout = function() {
         window.location.href = "/logout";

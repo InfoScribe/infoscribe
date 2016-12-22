@@ -1,105 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Infoscribe</title>
-	<meta charset="utf-8" />
-	<!--  Meta tags for sharing -->
-	<!---->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  	<meta charset="utf-8" />
+  	<!--  Meta tags for sharing -->
+  	<!---->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
-    <style>
-        
-         /* Sticky footer styles
-        -------------------------------------------------- */
-        html {
-          position: relative;
-          min-height: 100%;
-        }
-        .btn-primary {
-            background-color: #252525;
-        }
-        .panel {
-            border: 2px #EEE solid;
-            background-color: #FFFFFF;
-        }
-        body {
-          /* Margin bottom by footer height */
-          margin-bottom: 40px;
-          font-family: 'Open Sans', sans-serif;
-          overflow-x: hidden;
-          background-color: #F1F3F1;
-        }
-        h5{
-            font-family: 'Open Sans', sans-serif;
-        }
-        strong{
-            font-family: 'Open Sans', sans-serif;
-        }
-        .box{
-            border: 2px #BBB solid
-        }
-        .footer {
-          overflow: hidden;
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 40px;
-          background-color: #252525;
-        }
-    </style>
-    <style>
-    .sectionTitle {
-		font-weight: 100;
-		text-align: left;
-		border-bottom: 2px solid #0A0;
-		padding-top: 20px;
-		padding-bottom: 5px;
-	}
-	.courserow {
-        font-size:10px;
-        background:#FFF;
-        margin-bottom: 5px;
-        margin-top: 5px;
-    }
-	.courserow:hover {
-        background: #FFF;
-        text-decoration:none;
-        box-shadow: 0px 0px 10px #888888;
-        border-left: 3px solid #123;
-    }
-    .details {
-        font-size:9px;
-        /* Light Version 
-        border-top : 1px solid #DDD;
-        background: #FAFAFA;
-        */
-        /* Dark Version */
-        background:#222;
-        color: #EEE;
-        text-decoration:none;
-        max-height: 300px;
-        overflow-y: hidden;
-    }
-    .details a,h6 {
-        text-decoration:none;
-        color: #A4C5A1;
-    }
-    .prof {
-        font-size: bold;
-    }
-    .glyphicon.glyphicon-collapse-down {
-        font-size: 25px;
-    }
-    .glyphicon.glyphicon-collapse-up{
-        font-size: 25px;
-    }
-</style>
+  	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="/css/main.css" rel="stylesheet">
+  	<link href="/css/text.css" rel="stylesheet">
+  	<link href="/css/space.css" rel="stylesheet">
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- lato-web font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
     <base href="/">
-</head>
-<body ng-app="mainApp" flow-init>
+  </head>
+<body ng-app="mainApp" flow-init
+  flow-file-added="!!{png:1,gif:1,jpg:1,jpeg:1}[$file.getExtension()]">
 	<div ng-controller="homeCtrl">
 
 		<!-- Navbar -->
@@ -128,9 +46,8 @@
           </div>
         </div>
 
-		<div class="container" >
-			<br/><br/><br/><br/><br/>
-
+		<div class="" >
+			<br/><br/><br/><br/>
 			<div class="row">
                 <div class="col-sm-1 col-md-1"></div>
 				<div class="col-xs-12 col-sm-10 col-md-10">
@@ -142,22 +59,22 @@
 		</div>
 	</div>
 	<!-- -->
-	<footer class="footer" style="background-color:#222;">
+	<footer class="footer" style="background-color:#2C2C2C;">
     	<div class="container" align="middle">
 			<p class="text-muted">
 				<p class="white" valign="middle">
 					<a class="white" href="" target="_blank">InfoScribe @ Columbia</a>
-					
+
 				</p>
 			</p>
 		</div>
 	</footer>
     <!-- Loading scripts at the end -->
-	<script src="/js/jquery.min.js"></script>
+	  <script src="/js/jquery.min.js"></script>
     <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
     <script src="/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/js/angular.min.js"></script>
+	  <script src="/js/angular.min.js"></script>
     <script src="/js/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/js/ui-bootstrap-0.9.0.min.js"></script>
@@ -170,10 +87,11 @@
     <script src="/scripts/createProjectCtrl.js" ></script>
     <script src="/scripts/editProjectCtrl.js" ></script>
     <script src="/scripts/singleProjectCtrl.js" ></script>
+    <script src="/scripts/transcribeFileCtrl.js" ></script>
     <script src="/scripts/exemplarCtrl.js" ></script>
     <!-- Directives -->
     <script src="/scripts/directives/imageonload.js" ></script>
-	
+
 
 		<!-- End of Scripts -->
 </body>
